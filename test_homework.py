@@ -1,8 +1,7 @@
-import copy
+
 import math
-from random import random, randint
-import decimal
-import numbers
+from random import randint
+
 
 
 def test_greeting():
@@ -49,18 +48,22 @@ def test_circle():
     # TODO сосчитайте длину окружности
     length = 2 * math.pi * r
     assert length == 144.51326206513048
-    print(f'Площадь: {area} \nДлина {length}')
+    print(f'Площадь: {area} \nДлина: {length}')
+
 
 def test_random_list():
     """
     Создайте список из 10 случайных чисел от 1 до 100 и отсортируйте его по возрастанию.
     """
-    l = randint(0, 100)
-    return l
+    l = [randint(0, 100) for _ in range(10)]
+    print(l)
+    l.sort()
+
     # TODO создайте список
-    l = [10]
+
     assert len(l) == 10
     assert l[0] < l[-1]
+    print(l)
 
 
 def test_unique_elements():
@@ -68,11 +71,9 @@ def test_unique_elements():
     Удалите из списка все повторяющиеся элементы
     """
     l = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 10]
-    return
-    l = list.set([l])
 
     # TODO удалите повторяющиеся элементы
-
+    l = list(set(l))
     print(l)
     assert isinstance(l, list)
     assert len(l) == 10
