@@ -49,7 +49,7 @@ def test_circle():
     # TODO сосчитайте длину окружности
     length = 2 * math.pi * r
     assert length == 144.51326206513048
-
+    print(f'Площадь: {area} \nДлина {length}')
 
 def test_random_list():
     """
@@ -93,3 +93,4 @@ def test_dicts():
     d = dict(zip(first, second))
     assert isinstance(d, dict)
     assert len(d) == 5
+    print(f'Значения словаря: {d}')
